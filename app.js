@@ -6,10 +6,7 @@ require("dotenv").config();
 //middleware
 app.use(express.json());
 
-//routes
-app.get("/hello", (req, res) => {
-  res.send("Hi");
-});
+app.use(express.static("./public"));
 
 app.use("/api/v1/tasks", tasks);
 
